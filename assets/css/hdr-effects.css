@@ -1,0 +1,315 @@
+/* =========================================
+   HDR EFFECTS & SCROLL ANIMATION
+   ReeezdBaraqah – Ultra Modern Islamic
+   ========================================= */
+
+/* -----------------------------------------
+   OPTIONAL: Background global yang lebih HDR
+   Tambahkan class="hdr-bg" di <body> jika mau
+   ----------------------------------------- */
+
+body.hdr-bg {
+  background:
+    radial-gradient(circle at top left, rgba(254, 243, 199, 0.45), transparent 60%),
+    radial-gradient(circle at bottom right, rgba(45, 212, 191, 0.32), transparent 55%),
+    linear-gradient(145deg, #fefce8 0%, #f9fafb 40%, #fef9c3 100%);
+  background-attachment: fixed;
+}
+
+/* Lapisan glow lembut (tidak mengganggu klik) */
+body.hdr-bg::before,
+body.hdr-bg::after {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.7;
+  mix-blend-mode: soft-light;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(254, 240, 138, 0.5), transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(45, 212, 191, 0.55), transparent 55%);
+}
+
+
+/* -----------------------------------------
+   NAVBAR GLASSMORPHISM – .hdr-blur
+   Dipakai di <header class="navbar hdr-blur">
+   ----------------------------------------- */
+
+.hdr-blur {
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.88),
+    rgba(15, 23, 42, 0.93)
+  );
+  border-bottom: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow:
+    0 18px 38px rgba(15, 23, 42, 0.7),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+}
+
+/* Garis tipis hijau di bawah navbar (ornamen) */
+.hdr-blur::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(45, 212, 191, 0),
+    rgba(45, 212, 191, 0.85),
+    rgba(45, 212, 191, 0)
+  );
+  opacity: 0.9;
+}
+
+/* Style saat navbar diberi class .hdr-scrolled (optional dari JS) */
+.navbar.hdr-scrolled {
+  background: linear-gradient(
+    120deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(15, 23, 42, 0.99)
+  );
+  box-shadow:
+    0 20px 40px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 0.8);
+}
+
+/* -----------------------------------------
+   CARD HOVER – .hdr-hover
+   Dipakai di card utama (home, about, cart, dll)
+   ----------------------------------------- */
+
+.hdr-hover {
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    transform 0.12s ease-out,
+    background 0.16s ease-out;
+}
+
+/* Glow ring tipis di sekeliling card */
+.hdr-hover::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(45, 212, 191, 0.12);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.22s ease-out;
+}
+
+/* Highlight gradien lembut di sudut card */
+.hdr-hover::after {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(250, 250, 249, 0.9), transparent 45%),
+    radial-gradient(circle at 120% 120%, rgba(45, 212, 191, 0.18), transparent 55%);
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.hdr-hover:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow:
+    0 26px 52px rgba(15, 23, 42, 0.66),
+    0 0 0 1px rgba(45, 212, 191, 0.3);
+  border-color: rgba(45, 212, 191, 0.4) !important;
+}
+
+.hdr-hover:hover::before {
+  opacity: 1;
+}
+
+.hdr-hover:hover::after {
+  opacity: 1;
+  transform: translate3d(-6px, -4px, 0);
+}
+
+/* Sedikit efek saat focus-within (aksesibilitas) */
+.hdr-hover:focus-within {
+  box-shadow:
+    0 0 0 1.5px rgba(45, 212, 191, 0.6),
+    0 20px 40px rgba(15, 23, 42, 0.58);
+}
+
+
+/* -----------------------------------------
+   BUTTON GLOW (memperkuat .btn yang ada di main.css)
+   ----------------------------------------- */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 0% 0%, rgba(248, 250, 252, 0.6), transparent 55%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out, transform 0.22s ease-out;
+}
+
+.btn:hover::before {
+  opacity: 1;
+  transform: translate3d(6px, 4px, 0);
+}
+
+/* Denyut halus pada btn utama */
+.btn-primary {
+  box-shadow:
+    0 14px 32px rgba(16, 185, 129, 0.35),
+    0 0 0 1px rgba(16, 185, 129, 0.6);
+  transition:
+    box-shadow 0.18s ease-out,
+    transform 0.12s ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 45px rgba(16, 185, 129, 0.55),
+    0 0 0 1px rgba(16, 185, 129, 0.8);
+}
+
+
+/* -----------------------------------------
+   BADGE & CHIP glow tipis
+   ----------------------------------------- */
+
+.badge,
+.badge-circle,
+.product-tag,
+.wishlist-chip,
+.blog-category-pill {
+  position: relative;
+}
+
+.badge::before,
+.badge-circle::before,
+.product-tag::before,
+.wishlist-chip::before,
+.blog-category-pill::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  border: 1px solid rgba(250, 250, 249, 0.45);
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-out;
+}
+
+.badge:hover::before,
+.badge-circle:hover::before,
+.product-tag:hover::before,
+.wishlist-chip:hover::before,
+.blog-category-pill:hover::before {
+  opacity: 1;
+}
+
+
+/* -----------------------------------------
+   SCROLL ANIMATION
+   dipakai dengan .reveal-on-scroll + .is-visible
+   ----------------------------------------- */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.98);
+  filter: blur(6px);
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.6s ease-out;
+  will-change: opacity, transform, filter;
+}
+
+/* Saat elemen sudah masuk viewport (class ditambah via JS) */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  filter: blur(0);
+}
+
+/* Variasi arah animasi (opsional) */
+.reveal-left {
+  transform: translate3d(-24px, 0, 0) scale(0.98);
+}
+
+.reveal-right {
+  transform: translate3d(24px, 0, 0) scale(0.98);
+}
+
+/* Saat visible, override ke nol */
+.reveal-left.is-visible,
+.reveal-right.is-visible {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+
+/* -----------------------------------------
+   MICRO-ANIMATIONS UNTUK ICON BUTTON NAVBAR
+   ----------------------------------------- */
+
+.icon-button {
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.16s ease-out,
+    background 0.16s ease-out;
+}
+
+.icon-button:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 10px 22px rgba(15, 23, 42, 0.55),
+    0 0 0 1px rgba(148, 163, 184, 0.85);
+  background: radial-gradient(circle at 20% 0%, rgba(248, 250, 252, 0.8), rgba(15, 23, 42, 0.96));
+}
+
+/* Badge di icon */
+.badge-circle {
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 10px 18px rgba(15, 23, 42, 0.8);
+}
+
+
+/* -----------------------------------------
+   ANIMASI HALUS UNTUK HERO/SECTION PERTAMA
+   (jika diberi class .hero-animate)
+   ----------------------------------------- */
+
+.hero-animate {
+  animation: heroFloat 18s ease-in-out infinite alternate;
+  transform-origin: center center;
+}
+
+@keyframes heroFloat {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) scale(1.01);
+  }
+  100% {
+    transform: translate3d(0, 4px, 0) scale(1.005);
+  }
+}

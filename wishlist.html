@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wishlist – ReeezdBaraqah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Wishlist produk kitab, aksesoris, dan perlengkapan ngaji di ReeezdBaraqah." />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+  <main class="wishlist-main">
+    <section class="section">
+      <div class="container">
+        <header class="section-header" style="text-align:left; margin-bottom:1.75rem;">
+          <h1>Wishlist</h1>
+          <p>
+            Kumpulan produk yang ingin Anda simpan terlebih dahulu sebelum dibeli. Anda bisa memindahkan produk ke keranjang kapan saja.
+          </p>
+        </header>
+
+        <!-- WISHLIST KOSONG -->
+        <div id="wishlist-empty" class="wishlist-empty" hidden>
+          <div class="wishlist-empty-inner">
+            <div class="wishlist-empty-icon">📜</div>
+            <h2>Wishlist masih kosong</h2>
+            <p>Belum ada produk yang disimpan. Tambahkan kitab, pena, atau perlengkapan ngaji ke wishlist dari halaman katalog.</p>
+            <a href="shop.html" class="btn btn-primary">Lihat Katalog</a>
+          </div>
+        </div>
+
+        <!-- WISHLIST TERISI -->
+        <div id="wishlist-wrapper" class="wishlist-layout" hidden>
+          <div class="wishlist-header-row">
+            <span id="wishlist-count-text">0 produk di wishlist</span>
+          </div>
+
+          <div id="wishlist-items" class="wishlist-grid">
+            <!-- Diisi via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/6282264925085" target="_blank">+62 822-6492-5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+</body>
+</html>

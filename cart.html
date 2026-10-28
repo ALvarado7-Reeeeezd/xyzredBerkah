@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Keranjang – ReeezdBaraqah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Keranjang belanja kitab, alat tulis, dan perlengkapan ngaji di ReeezdBaraqah." />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body class="hdr-bg">
+  <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main class="cart-main">
+    <section class="section reveal-on-scroll">
+      <div class="container">
+        <header class="section-header">
+          <h1>Keranjang Belanja</h1>
+          <p>
+            Cek kembali daftar kitab dan perlengkapan ngaji yang ingin Anda pesan. Pilih item yang
+            akan di-checkout, lalu lanjutkan ke WhatsApp untuk konfirmasi dan detail ongkir.
+          </p>
+        </header>
+
+                <!-- CART LAYOUT -->
+        <div class="cart-layout">
+          
+          <!-- KOLOM KIRI: ITEMS -->
+          <div class="cart-items-card">
+            <!-- Header tabel -->
+            <div class="cart-table-head">
+              <div>Produk</div>
+              <div>Harga</div>
+              <div>Jumlah</div>
+              <div>Subtotal</div>
+              <div></div>
+            </div>
+
+            <!-- Empty state -->
+            <div id="cart-empty" class="cart-empty" hidden>
+              <div class="cart-empty-inner">
+                <div class="cart-empty-icon">🛒</div>
+                <h2>Keranjang Kosong</h2>
+                <p>Belum ada produk di keranjang Anda</p>
+                <a href="shop.html" class="btn btn-primary">Mulai Belanja</a>
+              </div>
+            </div>
+
+            <!-- List item (akan di-render via JS) -->
+            <div id="cart-items" class="cart-items">
+  <!-- TEST ITEM MANUAL -->
+  <div class="cart-row" style="display: grid; grid-template-columns: 2.8fr 1.1fr 0.9fr 1.1fr auto; gap: 0.75rem; padding: 0.75rem; background: white; border: 1px solid #ccc; border-radius: 8px;">
+    
+    <div class="cart-col-product" style="display: flex; gap: 0.75rem; align-items: center;">
+      <input type="checkbox" checked>
+      <div style="width: 56px; height: 72px; background: #ddd; border-radius: 4px;"></div>
+      <div>
+        <h4>TEST PRODUK</h4>
+        <p style="font-size: 0.8rem; color: #666;">Test manual</p>
+      </div>
+    </div>
+    
+    <div class="cart-col-price" style="font-weight: 600; color: #0f766e;">
+      Rp 50.000
+    </div>
+    
+    <div class="cart-col-qty">
+      <input type="number" value="1" style="width: 60px; padding: 4px; border: 1px solid #ccc;">
+    </div>
+    
+    <div class="cart-col-subtotal" style="font-weight: 700; color: #0f766e;">
+      Rp 50.000
+    </div>
+    
+    <div class="cart-col-remove">
+      <button style="padding: 4px 8px; background: #ef4444; color: white; border: none; border-radius: 4px; cursor: pointer;">✕</button>
+    </div>
+    
+  </div>
+  <!-- END TEST -->
+</div>
+          <!-- KOLOM KANAN: SUMMARY -->
+          <aside class="cart-summary-card">
+            <h2>Ringkasan Belanja</h2>
+
+            <div class="cart-summary-row">
+              <span>Item dipilih</span>
+              <span id="cart-summary-count">0 item</span>
+            </div>
+
+            <div class="cart-summary-divider"></div>
+
+            <div class="cart-summary-row cart-summary-total">
+              <span>Total sementara</span>
+              <span id="cart-summary-total">Rp0</span>
+            </div>
+
+            <p class="cart-summary-note">
+              Total ini belum termasuk ongkir. Ongkir dan detail akhir akan dikonfirmasi melalui WhatsApp.
+            </p>
+
+            <div class="cart-summary-actions">
+              <button type="button" class="btn btn-primary" id="cart-checkout-btn">
+                Checkout via WhatsApp
+              </button>
+              <a href="shop.html" class="btn btn-ghost">Lanjut Belanja</a>
+            </div>
+
+            <!-- Customer Info -->
+            <div class="cart-customer-box">
+              <div class="cart-customer-header">
+                <h3>Profil Customer</h3>
+                <a href="login.html?redirect=cart.html" class="cart-customer-link">
+                  Ubah / isi profil
+                </a>
+              </div>
+              <div id="cart-customer-info" class="cart-customer-info">
+                <!-- Diisi via JS -->
+              </div>
+              <p class="cart-customer-note">
+                Profil customer membantu mengisi draft pesan WhatsApp secara otomatis.
+              </p>
+            </div>
+          </aside>
+
+        </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="blog.html">Artikel</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/6282264925085" target="_blank">+62 822-6492-5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+<script src="assets/js/cart-page.js"></script>
+</body>
+</html>

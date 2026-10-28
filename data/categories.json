@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {
+      "id": "kitab",
+      "name": "Kitab",
+      "description": "Kitab turats dan rujukan utama untuk berbagai cabang ilmu syar'i.",
+      "icon": "📚"
+    },
+    {
+      "id": "alat-tulis",
+      "name": "Alat Tulis",
+      "description": "Pena, stabilo, dan perlengkapan menulis yang aman untuk kitab.",
+      "icon": "✒️"
+    },
+    {
+      "id": "aksesoris",
+      "name": "Aksesoris Kitab",
+      "description": "Sampul, pojokan kitab, pembatas halaman, dan pelindung lainnya.",
+      "icon": "📎"
+    },
+    {
+      "id": "perlengkapan-ngaji",
+      "name": "Perlengkapan Ngaji",
+      "description": "Meja ngaji, rak kitab, dan perlengkapan pendukung majelis ilmu.",
+      "icon": "🕌"
+    },
+    {
+      "id": "layanan",
+      "name": "Layanan Tambahan",
+      "description": "Layanan pemasangan sampul, paket kitab, dan konsultasi.",
+      "icon": "✨"
+    }
+  ],
+  "subjects": [
+    { "id": "Fiqh",        "ar": "الفقه",        "slug": "fiqh" },
+    { "id": "Tafsir",      "ar": "التفسير",      "slug": "tafsir" },
+    { "id": "Hadits",      "ar": "الحديث",      "slug": "hadits" },
+    { "id": "Nahwu",       "ar": "النحو",       "slug": "nahwu" },
+    { "id": "Sharaf",      "ar": "الصرف",       "slug": "sharaf" },
+    { "id": "Tauhid",      "ar": "التوحيد",     "slug": "tauhid" },
+    { "id": "Tasawuf",     "ar": "التصوف",     "slug": "tasawuf" },
+    { "id": "Ushul Fiqh",  "ar": "أصول الفقه",  "slug": "ushul-fiqh" }
+  ]
+}

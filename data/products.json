@@ -1,0 +1,627 @@
+[
+  {
+    "id": "matan-ajurumiyah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Nahwu", "ar": "النحو" },
+    "title": {
+      "id": "Matan Al-Ajurumiyyah",
+      "ar": "مَتْنُ الْآجُرُّومِيَّة"
+    },
+    "author": "Ibnu Ajurrum",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kitab dasar ilmu nahwu yang sangat populer di pesantren sebagai pondasi membaca teks Arab.",
+    "price": 6000,
+    "stock": 20,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Matan Ajurumiyah/Matan Ajurumiyah.jpg",
+      "assets/images/products/Matan Ajurumiyah/Matan Ajurumiyah1.jpg"
+    ],
+    "tags": ["nahwu", "santri pemula", "gramatika"],
+    "services": {
+      "cover_clear": 1000,
+      "full_cover_package": 7000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "adabul-alim-wal-mutaallim",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Adab", "ar": "الأدب" },
+    "title": {
+      "id": "Adabul 'Alim wal Muta'allim",
+      "ar": "أدب العالم والمتعلم"
+    },
+    "author": "KH. Hasyim Asy'ari",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Panduan adab penuntut ilmu dan pengajar yang menjadi rujukan utama di banyak pesantren.",
+    "price": 13000,
+    "stock": 15,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Adabul Alim Wal Muta'Allim/Adabul Alim Wal Muta'Allim.jpg",
+      "assets/images/products/Adabul Alim Wal Muta'Allim/Adabul Alim Wal Muta'Allim1.jpg"
+    ],
+    "tags": ["adab", "pendidikan"],
+    "services": {
+      "cover_clear": 1000,
+      "full_cover_package": 15000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "al-amtsilah-at-tasrifiyyah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Sharaf", "ar": "الصرف" },
+    "title": {
+      "id": "Al-Amtsilah at-Tashrifiyyah",
+      "ar": "الأمثلة التصريفية"
+    },
+    "author": "KH. Ma'shum 'Ali",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kitab ringkas ilmu sharaf yang berisi contoh-contoh perubahan kata bahasa Arab.",
+    "price": 3000,
+    "stock": 25,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Al Amtsilah At Tasrifiyyah/al-Amtsilah at-Tasrîfiyyah.jpg",
+      "assets/images/products/Al Amtsilah At Tasrifiyyah/al-Amtsilah at-Tasrîfiyyah1.jpg"
+    ],
+    "tags": ["sharaf", "pemula"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "riyadhus-shalihin",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Hadits", "ar": "الحديث" },
+    "title": {
+      "id": "Riyadhus Shalihin",
+      "ar": "رياض الصالحين"
+    },
+    "author": "Imam An-Nawawi",
+    "publisher": "-",
+    "cover_type": "hardcover",
+    "description": "Kumpulan hadits-hadits pilihan tentang akhlak, motivasi amal shalih, dan targhib tarhib.",
+    "price": 40000,
+    "stock": 10,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Riyadhus Shalihin/Riyadhus Shalihin.jpg",
+      "assets/images/products/Riyadhus Shalihin/Riyadhus Shalihin1.jpg"
+    ],
+    "tags": ["hadits", "akhlak"],
+    "services": {
+      "cover_clear": 7000,
+      "full_cover_package": 17000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "jawahirul-bukhori",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Hadits", "ar": "الحديث" },
+    "title": {
+      "id": "Jawahirul Bukhori",
+      "ar": "جواهر البخاري"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "hardcover",
+    "description": "Ringkasan isi Shahih al-Bukhari yang disusun agar lebih mudah dipelajari di pesantren.",
+    "price": 60000,
+    "stock": 8,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Jawahirul Bukhori/Jawahirul Bukhori.jpg",
+      "assets/images/products/Jawahirul Bukhori/Jawahirul Bukhori1.jpg"
+    ],
+    "tags": ["hadits", "bukhari"],
+    "services": {
+      "cover_clear": 7000,
+      "full_cover_package": 17000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "risalah-fii-as-shiyam",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Fiqh", "ar": "الفقه" },
+    "title": {
+      "id": "Risalah Fii As-Shiyam",
+      "ar": "رسالة في الصيام"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Risalah ringkas tentang hukum-hukum fiqh puasa, cocok sebagai pegangan praktis Ramadhan.",
+    "price": 12000,
+    "stock": 30,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/RISALAH FII AS-SHIYAM/RISALAH FII AS-SHIYAM.jpg",
+      "assets/images/products/RISALAH FII AS-SHIYAM/RISALAH FII AS-SHIYAM1.jpg"
+    ],
+    "tags": ["fiqh", "puasa"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "hikayatul-ashin",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Akhlak", "ar": "الأخلاق" },
+    "title": {
+      "id": "Hikayatul Ashin",
+      "ar": "حكاية العاصين"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kisah-kisah tentang orang yang durhaka dan kembali bertaubat, sarat dengan nasihat akhlak.",
+    "price": 11000,
+    "stock": 18,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/hikayatul Ashin/hikayatul Ashin.jpg",
+      "assets/images/products/hikayatul Ashin/hikayatul Ashin1.jpg"
+    ],
+    "tags": ["kisah", "akhlak"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": true
+  },
+  {
+    "id": "adab-sulukil-murid",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Tasawuf", "ar": "التصوف" },
+    "title": {
+      "id": "Adab Sulukil Murid",
+      "ar": "أدب سلوك المريد"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Panduan adab perjalanan seorang murid menuju Allah dalam tradisi tasawuf.",
+    "price": 15000,
+    "stock": 15,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Adab Sulukil Murid/Adab Sulukil Murid.jpg",
+      "assets/images/products/Adab Sulukil Murid/Adab Sulukil Murid1.jpg"
+    ],
+    "tags": ["tasawuf", "akhlak"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "ahadisul-adab",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Hadits", "ar": "الحديث" },
+    "title": {
+      "id": "Ahadisul Adab",
+      "ar": "أحاديث الأدب"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kumpulan hadits-hadits tentang adab dan akhlak keseharian seorang muslim.",
+    "price": 14000,
+    "stock": 15,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Ahadisul adab/Ahadisul Adab.jpg",
+      "assets/images/products/Ahadisul adab/Ahadisul Adab1.jpg"
+    ],
+    "tags": ["hadits", "adab"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "al-adzkar",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Dzikir", "ar": "الذكر" },
+    "title": {
+      "id": "Al-Adzkar",
+      "ar": "الأذكار"
+    },
+    "author": "Imam An-Nawawi",
+    "publisher": "-",
+    "cover_type": "hardcover",
+    "description": "Himpunan dzikir dan doa harian yang disusun oleh Imam An-Nawawi.",
+    "price": 35000,
+    "stock": 12,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Al Adzkar/Al-Adzkar An-Nawawiyah.jpg",
+      "assets/images/products/Al Adzkar/Al-Adzkar An-Nawawiyah1.jpg"
+    ],
+    "tags": ["dzikir", "doa"],
+    "services": {
+      "cover_clear": 7000,
+      "full_cover_package": 17000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "at-tadzhib-ghoyah-taqrib",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Fiqh", "ar": "الفقه" },
+    "title": {
+      "id": "At Tadzhib fi Adillatil Matni Al-Ghayah wat Taqrib",
+      "ar": "تهذيب في أدلة متن الغاية والتقريب"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "hardcover",
+    "description": "Kitab fiqh syafi'i yang menjelaskan dalil-dalil dalam Matn Ghayah wat Taqrib.",
+    "price": 35000,
+    "stock": 9,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/At Tadzhib fi Adillatil matnil Ghoyah wat Taqrib/At Tadzhib fi Adillatil matnil Ghoyah wat Taqrib.jpg",
+      "assets/images/products/At Tadzhib fi Adillatil matnil Ghoyah wat Taqrib/At Tadzhib fi Adillatil matnil Ghoyah wat Taqrib 1.jpg"
+    ],
+    "tags": ["fiqh", "syafii"],
+    "services": {
+      "cover_clear": 7000,
+      "full_cover_package": 17000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "hasyiyah-ibn-abi-jamrah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Hadits", "ar": "الحديث" },
+    "title": {
+      "id": "Hasyiyah ala Ibn Abi Jamrah 'ala Shahih al-Bukhari",
+      "ar": "حاشية ابن أبي جمرة على صحيح البخاري"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "hardcover",
+    "description": "Hasyiyah yang membahas pilihan hadits dari Shahih Bukhari dengan penjelasan padat.",
+    "price": 70000,
+    "stock": 7,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Hasiyah 'ala ibn Abi jamroh lilbukhori/HASYIYAH ALA MUKHTASOR IBNU ABI JAMROH LIL BUKHORI.jpg",
+      "assets/images/products/Hasiyah 'ala ibn Abi jamroh lilbukhori/HASYIYAH ALA MUKHTASOR IBNU ABI JAMROH LIL BUKHORI1.jpg"
+    ],
+    "tags": ["hadits", "bukhari"],
+    "services": {
+      "cover_clear": 7000,
+      "full_cover_package": 17000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "hujjah-ahlussunnah-waljamaah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Akidah", "ar": "العقيدة" },
+    "title": {
+      "id": "Hujjah Ahlussunnah wal Jamaah",
+      "ar": "حجة أهل السنة والجماعة"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Risalah akidah yang menegaskan prinsip-prinsip Ahlussunnah wal Jama'ah.",
+    "price": 10000,
+    "stock": 20,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Hujjah Ahlussunnah Waljamaah/Hujjah Ahlussunnah Waljamaah.jpg",
+      "assets/images/products/Hujjah Ahlussunnah Waljamaah/Hujjah Ahlussunnah Waljamaah1.jpg"
+    ],
+    "tags": ["akidah"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "idhoh-al-qowaid-al-fiqhiyyah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Qawaid Fiqhiyyah", "ar": "القواعد الفقهية" },
+    "title": {
+      "id": "Idhoh Al-Qowaid Al Fiqhiyyah",
+      "ar": "إيضاح القواعد الفقهية"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Pembahasan kaidah-kaidah fiqhiyah yang memudahkan memahami hukum cabang.",
+    "price": 23000,
+    "stock": 14,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Idhoh Al Qowaid Al Fiqhiyah/Idhoh Al Qowaid Al Fiqhiyah.jpg",
+      "assets/images/products/Idhoh Al Qowaid Al Fiqhiyah/Idhoh Al Qowaid Al Fiqhiyah1.jpg"
+    ],
+    "tags": ["qawaid", "fiqh"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "khulasoh-nurul-yaqin",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Sirah", "ar": "السيرة" },
+    "title": {
+      "id": "Khulasoh Nurul Yaqin",
+      "ar": "خلاصة نور اليقين"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Ringkasan sejarah hidup Nabi Muhammad SAW dengan bahasa yang mudah.",
+    "price": 22000,
+    "stock": 16,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Khulasoh Nurul Yaqin/Khulasoh Nurul Yaqin.jpg",
+      "assets/images/products/Khulasoh Nurul Yaqin/Khulasoh Nurul Yaqin1.jpg"
+    ],
+    "tags": ["sirah"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "mabadi-awwaliyah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Fiqh", "ar": "الفقه" },
+    "title": {
+      "id": "Mabadi Awwaliyah",
+      "ar": "مبادئ أولية"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kitab fiqh dasar untuk pemula yang biasa dipakai di kelas awal.",
+    "price": 12000,
+    "stock": 22,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Mabadi Awaliyah/Mabadi Awaliyah.jpg",
+      "assets/images/products/Mabadi Awaliyah/Mabadi Awaliyah1.jpg"
+    ],
+    "tags": ["fiqh", "pemula"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "sabilut-taubah",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Tasawuf", "ar": "التصوف" },
+    "title": {
+      "id": "Sabilut Taubah",
+      "ar": "سبيل التوبة"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Pembahasan tentang taubat, tazkiyatun nafs, dan jalan memperbaiki diri.",
+    "price": 16000,
+    "stock": 18,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/sabilut taubah/sabilut taubah.jpg",
+      "assets/images/products/sabilut taubah/sabilut taubah1.jpg"
+    ],
+    "tags": ["tasawuf", "taubat"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+    "id": "tajul-arsus-unsu-nufus",
+    "type": "book",
+    "category": "kitab",
+    "subject": { "id": "Tasawuf", "ar": "التصوف" },
+    "title": {
+      "id": "Tajul Arsus wa Unsu Al Nufus",
+      "ar": "تاج العروس وأنس النفوس"
+    },
+    "author": "-",
+    "publisher": "-",
+    "cover_type": "softcover",
+    "description": "Kitab akhlak dan tasawuf yang mengajarkan pembersihan hati dan jiwa.",
+    "price": 18000,
+    "stock": 11,
+    "is_preorder": false,
+    "images": [
+      "assets/images/products/Tajul Arsus wa Unsu Al Nufus/Tajul Arsus wa Unsu Al Nufus.jpg",
+      "assets/images/products/Tajul Arsus wa Unsu Al Nufus/Tajul Arsus wa Unsu Al Nufus1.jpg"
+    ],
+    "tags": ["tasawuf", "akhlak"],
+    "services": {
+      "cover_clear": 5000,
+      "full_cover_package": 15000
+    },
+    "is_featured": false
+  },
+  {
+  "id": "senjata-tempur",
+  "type": "service",
+  "category": "layanan",
+  "subject": null,
+  "title": {
+    "id": "Senjata Tempur",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Paket turbo penambah daya tahan kantuk saat ngaji.",
+  "price": 10000,
+  "stock": 30,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Senjata Tempur/Senjata Tempur.jpg"
+  ],
+  "tags": ["layanan tambahan", "paket layanan"],
+  "services": {},
+  "is_featured": false
+},
+{
+  "id": "sampul-kitab",
+  "type": "accessory",
+  "category": "aksesoris",
+  "subject": null,
+  "title": {
+    "id": "Sampul Kitab",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Sampul kitab dengan bahan kuat dan bening untuk melindungi kitab dari kotoran dan lipatan, cocok untuk pemakaian harian di pesantren.",
+  "price": 1000,
+  "stock": 50,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Sampul Kitab/Sampul Kitab.jpg"
+  ],
+  "tags": ["aksesoris kitab", "sampul"],
+  "services": {},
+  "is_featured": false
+},
+{
+  "id": "pojokan-kitab",
+  "type": "accessory",
+  "category": "aksesoris",
+  "subject": null,
+  "title": {
+    "id": "Pojokan Kitab",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Pelindung pojok kitab untuk mencegah ujung halaman mudah rusak dan terlipat, membantu menjaga kerapian koleksi turats.",
+  "price": 2000,
+  "stock": 80,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Pojokan Kitab/Pojokan Kitab.jpg"
+  ],
+  "tags": ["aksesoris kitab", "pojokan"],
+  "services": {},
+  "is_featured": false
+},
+{
+  "id": "penanda-kitab",
+  "type": "accessory",
+  "category": "perlengkapan-ngaji",
+  "subject": null,
+  "title": {
+    "id": "Penanda Kitab",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Penanda kitab praktis untuk menandai pelajaran terakhir, memudahkan santri kembali ke halaman yang sama saat ngaji berikutnya.",
+  "price": 6000,
+  "stock": 100,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Penanda Kitab/Penanda Kitab.jpg"
+  ],
+  "tags": ["perlengkapan ngaji", "penanda"],
+  "services": {},
+  "is_featured": false
+},
+{
+  "id": "meja-ngaji-lipat",
+  "type": "equipment",
+  "category": "perlengkapan-ngaji",
+  "subject": null,
+  "title": {
+    "id": "Meja Ngaji Lipat",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Meja ngaji lipat yang kokoh dan ringan, dirancang untuk kenyamanan membaca kitab dalam waktu lama, mudah disimpan dan dibawa.",
+  "price": 45000,
+  "stock": 20,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Meja Ngaji Lipat/Meja Ngaji Lipat.jpg"
+  ],
+  "tags": ["perlengkapan ngaji", "meja ngaji"],
+  "services": {},
+  "is_featured": false
+},
+{
+  "id": "hi-tech-c",
+  "type": "stationery",
+  "category": "alat-tulis",
+  "subject": null,
+  "title": {
+    "id": "Hi-Tech-C",
+    "ar": ""
+  },
+  "author": "-",
+  "publisher": "-",
+  "cover_type": "-",
+  "description": "Pulpen Hi-Tech-C dengan ujung halus yang aman untuk kertas kitab, cocok untuk memberikan catatan tipis tanpa tembus.",
+  "price": 24000,
+  "stock": 40,
+  "is_preorder": false,
+  "images": [
+    "assets/images/products/Hi-Tech-C/Hi-Tech-C.jpg",
+    "assets/images/products/Hi-Tech-C/Hi-Tech-C1.jpg"
+  ],
+  "tags": ["alat tulis", "pulpen"],
+  "services": {},
+  "is_featured": false
+}
+]

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel & Catatan - ReeezdBaraqah</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <!-- Halaman ini: Artikel → boleh diberi class active -->
+        <li><a href="blog.html" class="nav-link active">Artikel</a></li>
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login">
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <!-- Reading Progress -->
+    <div class="blog-progress-bar" id="reading-progress"></div>
+
+    <!-- Page Header - Pesantren Style (NO YELLOW ORNAMENT) -->
+    <section class="blog-header-traditional">
+        <div class="container">
+            <h1 class="page-title-traditional">Artikel & Catatan ReeezdBaraqah</h1>
+            <p class="page-subtitle-traditional">
+                Kumpulan tulisan seputar kitab, perawatan koleksi, dan tips menata perlengkapan ngaji
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Content - Two Column Layout -->
+    <section class="blog-content-traditional">
+        <div class="container">
+            <div class="blog-layout-traditional">
+                
+                <!-- Sidebar -->
+                <aside class="blog-sidebar-traditional">
+                    <div class="sidebar-sticky-traditional">
+                        
+                        <!-- Search Box -->
+                        <div class="search-box-traditional">
+                            <input 
+                                type="text" 
+                                id="blog-search" 
+                                placeholder="🔍 Cari artikel..."
+                                class="search-input-traditional">
+                        </div>
+
+                        <!-- Article List -->
+                        <div class="article-list-traditional" id="blog-list"></div>
+                        
+                        <p id="blog-list-empty" class="empty-state-traditional" hidden>
+                            Tidak ada artikel yang cocok
+                        </p>
+                        
+                    </div>
+                </aside>
+
+                <!-- Main Reading Area -->
+                <main class="blog-reader-traditional">
+                    <article id="blog-viewer-content" class="article-container-traditional">
+                        
+                        <!-- Placeholder -->
+                        <div class="article-placeholder-traditional">
+                            <div class="placeholder-icon-traditional">📖</div>
+                            <h2>Pilih Artikel untuk Dibaca</h2>
+                            <p>Klik salah satu judul di sebelah kiri untuk memulai membaca</p>
+                        </div>
+                        
+                    </article>
+                </main>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ReeezdBaraqah. Kitab Terarah, Ilmu Berkah.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>

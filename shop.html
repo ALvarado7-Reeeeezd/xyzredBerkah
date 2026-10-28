@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Katalog – ReeezdBaraqah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Katalog kitab, alat tulis, aksesoris, dan perlengkapan ngaji di ReeezdBaraqah." />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body>
+  <<!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main class="shop-main">
+    <!-- HEADER SHOP -->
+    <section class="section shop-header">
+      <div class="container">
+        <div class="shop-header-inner">
+          <div>
+            <h1>Katalog ReeezdBaraqah</h1>
+            <p>
+              Jelajahi kitab turats, alat tulis, aksesoris, dan perlengkapan ngaji yang kami kurasi untuk santri, pengajar, dan pencari ilmu.
+            </p>
+          </div>
+          <div class="shop-stats">
+            <div class="shop-stat">
+              <span class="shop-stat-label">Total Produk</span>
+              <span class="shop-stat-value" id="shop-total-products">–</span>
+            </div>
+            <div class="shop-stat">
+              <span class="shop-stat-label">Hasil Filter</span>
+              <span class="shop-stat-value" id="shop-filtered-products">–</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="section-soft shop-filters-section">
+      <div class="container">
+        <div class="shop-filters-card hdr-hover">
+          <div class="shop-filters-grid">
+            <!-- Search -->
+            <div class="filter-group filter-group-wide">
+              <label for="search-input">Cari Produk</label>
+              <div class="filter-input-wrapper">
+                <input
+                  type="search"
+                  id="search-input"
+                  class="filter-input"
+                  placeholder="Cari kitab, penulis, keilmuan, atau aksesoris…">
+              </div>
+              <small class="filter-hint">
+                Contoh: “fiqh”, “bidayatul hidayah”, “pena”, “rak kitab”
+              </small>
+            </div>
+
+            <!-- Kategori -->
+            <div class="filter-group">
+              <label for="filter-category">Kategori</label>
+              <select id="filter-category" class="filter-input">
+                <option value="all">Semua Kategori</option>
+                <!-- opsi lain diisi via JS dari categories.json -->
+              </select>
+            </div>
+
+            <!-- Subject / keilmuan -->
+            <div class="filter-group">
+              <label for="filter-subject">Keilmuan (Kitab)</label>
+              <select id="filter-subject" class="filter-input">
+                <option value="all">Semua Keilmuan</option>
+                <!-- opsi lain diisi via JS -->
+              </select>
+            </div>
+
+          <div class="filter-actions">
+            <button type="button" class="btn btn-primary" id="filter-apply-btn">
+              Terapkan Filter
+            </button>
+            <button type="button" class="btn btn-ghost" id="filter-reset-btn">
+              Reset
+            </button>
+          </div>
+
+          <div class="active-filters" id="active-filters" hidden>
+            <span class="active-filters-label">Filter aktif:</span>
+            <div class="active-filters-list" id="active-filters-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID PRODUK -->
+    <section class="section">
+      <div class="container">
+        <div id="shop-products-wrapper">
+          <div id="shop-products" class="product-grid">
+            <!-- Diisi lewat JS -->
+          </div>
+
+          <div id="shop-no-results" class="shop-no-results" hidden>
+            <div class="shop-no-results-inner">
+              <div class="shop-no-results-icon">🕊️</div>
+              <h2>Tidak ada produk yang cocok</h2>
+              <p>Coba longgarkan filter, ganti kata kunci, atau pilih kategori lain.</p>
+              <button type="button" class="btn btn-ghost" id="no-results-reset-btn">
+                Reset Semua Filter
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/6282264925085" target="_blank">+62 822-6492-5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/shop.js"></script>
+</body>
+</html>

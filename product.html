@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detail Produk – ReeezdBaraqah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Detail produk kitab dan perlengkapan ngaji di ReeezdBaraqah." />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main class="product-main">
+    <section class="section">
+      <div class="container">
+        <!-- DETAIL PRODUK -->
+        <div id="product-detail-grid" class="product-detail-grid" hidden>
+          <!-- GALLERY -->
+          <div id="product-gallery">
+  <div class="product-main-image-wrapper">
+    <img id="product-main-image" src="" alt="Product" />
+  </div>
+  <div id="product-thumbnails" class="product-thumbnails">
+    <!-- Thumbnails akan di-render oleh JS -->
+  </div>
+</div>
+
+          <!-- INFO -->
+          <div class="product-info">
+            <div class="product-breadcrumb">
+              <a href="shop.html">Katalog</a>
+              <span class="separator">/</span>
+              <span id="product-breadcrumb-category">Kategori</span>
+            </div>
+
+            <div class="product-title-block">
+              <div id="product-title-ar" class="product-title-ar-large"></div>
+              <h1 id="product-title" class="product-title-main"></h1>
+            </div>
+
+            <div class="product-meta-chips">
+              <span id="product-category-chip" class="product-chip chip-category" hidden></span>
+              <span id="product-subject" class="product-chip chip-subject" hidden></span>
+            </div>
+
+            <div class="product-author-line" id="product-author-line" hidden>
+              <strong>Penulis:</strong> <span id="product-author"></span>
+            </div>
+            <div class="product-publisher-line" id="product-publisher-line" hidden>
+              <strong>Penerbit:</strong> <span id="product-publisher"></span>
+            </div>
+            <div class="product-cover-line" id="product-cover-line" hidden>
+              <strong>Jenis Cover:</strong> <span id="product-cover"></span>
+            </div>
+
+            <div class="product-price-section">
+              <div id="product-price" class="product-price-main"></div>
+              <div id="product-status" class="product-status"></div>
+              <div id="product-stock" class="product-stock"></div>
+              <div id="product-price-addons" class="product-price-addons"></div>
+            </div>
+
+            <div class="product-description" id="product-description"></div>
+
+            <div class="product-services-wrapper" id="product-services-wrapper" hidden>
+              <h3>Layanan Tambahan</h3>
+              <p class="product-services-hint">
+                Pilih layanan tambahan per eksemplar (opsional). Biaya akan ditambahkan ke harga kitab.
+              </p>
+              <div class="product-services" id="product-services"></div>
+            </div>
+
+            <div class="product-cta-row">
+              <div class="product-qty-group">
+                <label for="product-qty">Jumlah</label>
+                <input type="number" id="product-qty" min="1" value="1">
+              </div>
+              <div class="product-cta-buttons">
+                <button id="btn-add-to-cart" class="btn btn-primary">
+                  Tambah ke Keranjang
+                </button>
+                <button id="btn-toggle-wishlist" class="btn btn-ghost">
+                  Tambah ke Wishlist
+                </button>
+              </div>
+            </div>
+
+            <div class="product-tags" id="product-tags"></div>
+          </div>
+        </div>
+
+        <!-- KALAU PRODUK TIDAK DITEMUKAN -->
+        <div id="product-not-found" class="product-not-found" hidden>
+          <div class="product-not-found-inner">
+            <div class="product-not-found-icon">🕊️</div>
+            <h1>Produk tidak ditemukan</h1>
+            <p>Link yang Anda buka tidak lagi tersedia atau ID produk tidak valid.</p>
+            <a href="shop.html" class="btn btn-primary">Kembali ke Katalog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK TERKAIT -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Produk Terkait</h2>
+          <p>Beberapa produk lain yang mungkin relevan dengan pencarian Anda.</p>
+        </header>
+        <div id="related-products" class="product-grid">
+          <!-- diisi via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/6282264925085" target="_blank">+62 822-6492-5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/product.js"></script>
+</body>
+</html>

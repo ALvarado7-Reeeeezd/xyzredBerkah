@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login Customer – ReeezdBaraqah</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Login customer ReeezdBaraqah untuk menyimpan nama dan nomor WhatsApp agar checkout lebih mudah." />
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+</head>
+<body class="hdr-bg">
+  <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <main class="login-main">
+    <section class="section reveal-on-scroll">
+      <div class="container login-layout">
+        <div class="login-intro hero-animate">
+          <p class="eyebrow">Login Customer</p>
+          <h1>Simpan data sekali, mudahkan checkout berkali-kali</h1>
+          <p>
+            Halaman ini bukan login seperti aplikasi perbankan. Data yang Anda isi hanya disimpan di
+            <strong>browser Anda sendiri</strong> melalui localStorage, dan digunakan untuk memudahkan
+            kami ketika menyusun pesanan di WhatsApp.
+          </p>
+          <p>
+            Anda bisa mengubah atau menghapus data ini kapan saja. Jika ganti perangkat atau browser,
+            data perlu diisi ulang.
+          </p>
+
+          <div class="login-notes hdr-hover">
+            <h2>Informasi yang kami simpan:</h2>
+            <ul>
+              <li>Nama lengkap yang akan digunakan saat pengiriman.</li>
+              <li>Nomor WhatsApp utama untuk komunikasi pesanan.</li>
+              <li>Alamat singkat / patokan (opsional) sebagai pengingat.</li>
+            </ul>
+            <p>
+              Detail alamat lengkap dan preferensi pengiriman tetap dikonfirmasi di WhatsApp setiap kali order.
+            </p>
+          </div>
+        </div>
+
+        <div class="login-card hdr-hover">
+          <div class="login-card-header">
+            <h2>Login / Profil Customer</h2>
+            <p id="login-status-text" class="login-status-text">
+              Isi data di bawah untuk menyimpan profil di perangkat ini.
+            </p>
+          </div>
+
+          <form id="login-form" class="login-form">
+            <div class="form-group">
+              <label for="customer-name">Nama lengkap<span>*</span></label>
+              <input
+                type="text"
+                id="customer-name"
+                name="name"
+                autocomplete="name"
+                required
+                placeholder="Contoh: Ahmad Zainuddin">
+            </div>
+
+            <div class="form-group">
+              <label for="customer-wa">Nomor WhatsApp<span>*</span></label>
+              <input
+                type="tel"
+                id="customer-wa"
+                name="whatsapp"
+                autocomplete="tel"
+                required
+                placeholder="Contoh: 62812xxxxxxx">
+              <small>Gunakan format angka tanpa spasi, misalnya 62812xxxxxxx.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="customer-short-address">Alamat singkat / patokan (opsional)</label>
+              <textarea
+                id="customer-short-address"
+                name="short_address"
+                rows="3"
+                placeholder="Contoh: Pesantren XYZ, Blok A kamar 12, Cileunyi – Bandung"></textarea>
+            </div>
+
+            <div class="login-actions">
+              <button type="submit" class="btn btn-primary" id="login-submit-btn">
+                Simpan Profil
+              </button>
+              <button type="button" class="btn btn-ghost" id="login-clear-btn">
+                Hapus Profil dari Perangkat Ini
+              </button>
+            </div>
+
+            <p class="login-disclaimer">
+              Data ini <strong>tidak dikirim</strong> ke server mana pun, hanya tersimpan di browser Anda.
+              Jika Anda membersihkan cache/storage, data akan ikut terhapus.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="blog.html">Artikel</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/6282264925085" target="_blank">+62 822-6492-5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

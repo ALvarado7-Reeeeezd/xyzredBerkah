@@ -1,0 +1,364 @@
+/* ============================================
+   MOTION FAQ - HEAVY EFFECTS LAYER
+   ReeezdBaraqah - Advanced UI/UX Upgrade
+   ============================================ */
+
+/* ----------------------------------------
+   PARTICLES BACKGROUND CONTAINER
+   ---------------------------------------- */
+#faq-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ----------------------------------------
+   FAQ LAYOUT - ANIMATED ENTRANCE
+   ---------------------------------------- */
+.faq-layout {
+  animation: fadeInScale 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform-origin: center;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ----------------------------------------
+   FAQ ITEMS - ADVANCED HOVER & STATES
+   ---------------------------------------- */
+.faq-item {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: visible !important;
+}
+
+/* Ripple effect container */
+.faq-item::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 118, 110, 0.3), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease-out, height 0.6s ease-out, opacity 0.6s ease-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq-item.ripple::before {
+  width: 600px;
+  height: 600px;
+  opacity: 1;
+}
+
+/* Glow effect on hover */
+.faq-item:hover {
+  transform: translateX(8px) translateY(-4px);
+  box-shadow: 
+    0 20px 60px rgba(15, 118, 110, 0.25),
+    0 0 40px rgba(45, 212, 191, 0.15),
+    inset 0 0 20px rgba(45, 212, 191, 0.05);
+  border-color: rgba(15, 118, 110, 0.8);
+}
+
+/* Open state with enhanced shadow */
+.faq-item.open {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(236, 254, 255, 0.6));
+  box-shadow: 
+    0 25px 80px rgba(15, 118, 110, 0.35),
+    0 0 60px rgba(45, 212, 191, 0.2),
+    inset 0 0 30px rgba(15, 118, 110, 0.08);
+  border-color: #0f766e;
+}
+
+/* ----------------------------------------
+   FAQ QUESTION - ADVANCED BUTTON EFFECTS
+   ---------------------------------------- */
+.faq-question {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Shimmer effect on hover */
+.faq-question::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(45, 212, 191, 0.2),
+    transparent
+  );
+  transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-question:hover::after {
+  left: 100%;
+}
+
+.faq-question:hover {
+  background: linear-gradient(90deg, rgba(15, 118, 110, 0.05), transparent);
+}
+
+/* Active press effect */
+.faq-question:active {
+  transform: scale(0.98);
+}
+
+/* ----------------------------------------
+   TOGGLE ICON - MORPHING ANIMATION
+   ---------------------------------------- */
+.faq-toggle-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f766e, #34d399);
+  color: white;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+}
+
+.faq-item.open .faq-toggle-icon {
+  transform: rotate(135deg) scale(1.1);
+  background: linear-gradient(135deg, #34d399, #0f766e);
+  box-shadow: 
+    0 6px 20px rgba(15, 118, 110, 0.5),
+    0 0 30px rgba(45, 212, 191, 0.3);
+}
+
+.faq-question:hover .faq-toggle-icon {
+  transform: scale(1.15);
+  box-shadow: 
+    0 6px 20px rgba(15, 118, 110, 0.4),
+    0 0 20px rgba(45, 212, 191, 0.2);
+}
+
+/* Icon glow pulse */
+@keyframes iconPulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 20px rgba(15, 118, 110, 0.6), 0 0 30px rgba(45, 212, 191, 0.4);
+  }
+}
+
+.faq-item.open .faq-toggle-icon {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* ----------------------------------------
+   FAQ ANSWER - SMOOTH REVEAL
+   ---------------------------------------- */
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.4s ease-out 0.1s,
+              padding 0.4s ease-out;
+  will-change: max-height, opacity;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 1000px;
+  opacity: 1;
+  animation: slideInContent 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s backwards;
+}
+
+@keyframes slideInContent {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------
+   SIDE CARD - FLOATING ANIMATION
+   ---------------------------------------- */
+.faq-side-card {
+  animation: floatingSidecard 4s ease-in-out infinite;
+  box-shadow: 
+    0 25px 80px rgba(30, 64, 175, 0.4),
+    0 0 60px rgba(129, 140, 248, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes floatingSidecard {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Animated gradient overlay */
+.faq-side-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg at 50% 50%,
+    rgba(129, 140, 248, 0.3),
+    transparent 60deg,
+    rgba(45, 212, 191, 0.2),
+    transparent 180deg,
+    rgba(250, 204, 21, 0.15),
+    transparent 300deg,
+    rgba(129, 140, 248, 0.3)
+  );
+  animation: rotateConic 8s linear infinite;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+@keyframes rotateConic {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* WhatsApp button enhanced */
+.faq-side-card .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faq-side-card .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease-out, height 0.5s ease-out;
+}
+
+.faq-side-card .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.faq-side-card .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 
+    0 15px 40px rgba(16, 185, 129, 0.5),
+    0 0 40px rgba(45, 212, 191, 0.3);
+}
+
+/* ----------------------------------------
+   SCROLL REVEAL - STAGGER ANIMATION
+   ---------------------------------------- */
+.faq-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faq-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delay for items */
+.faq-item:nth-child(1) { transition-delay: 0.1s; }
+.faq-item:nth-child(2) { transition-delay: 0.2s; }
+.faq-item:nth-child(3) { transition-delay: 0.3s; }
+.faq-item:nth-child(4) { transition-delay: 0.4s; }
+.faq-item:nth-child(5) { transition-delay: 0.5s; }
+.faq-item:nth-child(6) { transition-delay: 0.6s; }
+.faq-item:nth-child(7) { transition-delay: 0.7s; }
+
+/* ----------------------------------------
+   SECTION HEADER - KINETIC TYPOGRAPHY
+   ---------------------------------------- */
+.section-header h1 {
+  background: linear-gradient(135deg, #064e3b, #0f766e, #34d399);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ----------------------------------------
+   RESPONSIVE ADJUSTMENTS
+   ---------------------------------------- */
+@media (max-width: 768px) {
+  .faq-item:hover {
+    transform: translateX(4px) translateY(-2px);
+  }
+  
+  .faq-side-card {
+    animation: none;
+  }
+}
+
+/* ----------------------------------------
+   PERFORMANCE OPTIMIZATION
+   ---------------------------------------- */
+.faq-item,
+.faq-question,
+.faq-answer,
+.faq-toggle-icon {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,293 @@
+<!-- FILE: index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>ReeezdBaraqah – Kitab & Perlengkapan Ngaji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="ReeezdBaraqah – Mini e-commerce untuk kitab, alat tulis, dan perlengkapan ngaji bernuansa pesantren modern." />
+  
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/hdr-effects.css">
+  <!-- Icon bebas (jika mau pakai, bisa load Remixicon / Font Awesome) -->
+</head>
+<body>
+  <!-- NAVBAR -->
+<header class="navbar hdr-blur">
+  <div class="container nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">ر</div>
+        <div class="brand-text">
+          <span class="brand-name">ReeezdBaraqah</span>
+          <span class="brand-tagline">Kitab Terarah, Ilmu Berkah</span>
+        </div>
+      </a>
+    </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav-right">
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="shop.html" class="nav-link">Katalog</a></li>
+        <li><a href="blog.html" class="nav-link">Artikel</a></li> <!-- ✅ ADDED -->
+        <li><a href="about.html" class="nav-link">Tentang Kami</a></li>
+        <li><a href="how-to-order.html" class="nav-link">Cara Order</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="wishlist.html" class="icon-button" aria-label="Wishlist">
+          ♥
+          <span class="badge-circle" id="wishlist-count">0</span>
+        </a>
+        <a href="cart.html" class="icon-button" aria-label="Keranjang">
+          🛒
+          <span class="badge-circle" id="cart-count">0</span>
+        </a>
+        <a href="login.html" class="icon-button" aria-label="Login"> <!-- ✅ ADDED -->
+          👤
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+  <!-- ================= HERO (HOME) ================= -->
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="hero-arabic">بــركــــة الكــتــب</span>
+            <span class="hero-main">Kitab Terarah, Ilmu Berkah</span>
+          </h1>
+          <p class="hero-subtitle">
+            Pilihan kitab turats, alat tulis, dan perlengkapan ngaji yang dikurasi untuk santri, pengajar, dan pencari ilmu.
+          </p>
+          <div class="hero-cta">
+            <a href="shop.html" class="btn btn-primary btn-glow">Lihat Katalog</a>
+            <a href="#kategori" class="btn btn-ghost">Lihat Kategori</a>
+          </div>
+          <div class="hero-meta">
+            <span>⟡ Kurasi Kitab Pesantren</span>
+            <span>⟡ Layanan Sampul & Full Cover</span>
+            <span>⟡ Konsultasi Paket Kitab</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card hdr-card-3d">
+            <div class="hero-card-inner">
+              <div class="hero-card-badge">Kitab Populer</div>
+              <div class="hero-card-title">فتح القريب – Fathul Qarib</div>
+              <div class="hero-card-meta">Fiqh • Syafi'i • Santri Pemula</div>
+              <div class="hero-card-price">Rp70.000</div>
+              <div class="hero-card-footer">Tersedia paket + sampul bening</div>
+            </div>
+          </div>
+          <div class="hero-orbit hero-orbit-1"></div>
+          <div class="hero-orbit hero-orbit-2"></div>
+          <div class="hero-orbit hero-orbit-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION KATEGORI (nanti di Step berikutnya kita isi) -->
+    <section id="kategori" class="section section-soft">
+      <div class="container">
+        <header class="section-header">
+          <h2>Kategori Utama</h2>
+          <p>Pilih jalur ilmu yang ingin kamu kuatkan.</p>
+        </header>
+
+        <div class="category-grid">
+          <!-- contoh dummy card; nanti bisa dihubungkan ke filter shop.html -->
+          <a href="shop.html?category=kitab" class="category-card hdr-hover">
+            <div class="category-icon">📚</div>
+            <h3>Kitab Turats</h3>
+            <p>Fiqh, Tafsir, Hadits, Nahwu, Sharaf, dan lainnya.</p>
+            <div class="category-label-ar"></div>
+          </a>
+          <a href="shop.html?category=alat-tulis" class="category-card hdr-hover">
+            <div class="category-icon">✒️</div>
+            <h3>Pena & Penanda</h3>
+            <p>Hi-Tech C dan penanda halaman.</p>
+          </a>
+          <a href="shop.html?category=aksesoris" class="category-card hdr-hover">
+            <div class="category-icon">📎</div>
+            <h3>Aksesoris Kitab</h3>
+            <p>Sampul bening dan pojokan kitab.</p>
+          </a>
+          <a href="shop.html?category=perlengkapan-ngaji" class="category-card hdr-hover">
+            <div class="category-icon">🕌</div>
+            <h3>Perlengkapan Ngaji</h3>
+            <p>Meja ngaji dan pendukung majelis ilmu.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION PRODUK UNGGULAN (akan kita perkuat di step berikutnya) -->
+    <section class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Produk Unggulan</h2>
+          <p>Beberapa produk yang sering diburu santri & pengajar.</p>
+        </header>
+        <div id="featured-products" class="product-grid">
+          <!-- Diisi via JS (app.js) -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3>ReeezdBaraqah</h3>
+        <p>Mini e-commerce untuk kitab dan perlengkapan ngaji dengan kurasi khas pesantren.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="shop.html">Katalog</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+          <li><a href="how-to-order.html">Cara Order</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <p>WhatsApp: <a href="https://wa.me/628xxxxxx" target="_blank">+62 822 6492 5085</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/sans_theoso/" target="_blank">sans_theoso</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© <span id="year"></span> ReeezdBaraqah. Semua hak dilindungi.</small>
+    </div>
+  </footer>
+
+    <!-- FOOTER selesai di atas sini -->
+
+    <!-- JS Global -->
+  <script src="assets/js/app.js"></script>
+
+  <!-- JS khusus Beranda -->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Toggle hamburger menu (mobile)
+      const ham = document.getElementById('hamburger-btn');
+      if (ham) {
+        ham.addEventListener('click', () => {
+          document.getElementById('nav-menu').classList.toggle('active');
+          ham.classList.toggle('active');
+        });
+      }
+
+      const grid = document.getElementById('featured-products');
+      if (!grid) return;
+
+      grid.innerHTML = '<div class="loading-state">Memuat produk unggulan...</div>';
+
+      // 1) Ambil data produk dari products.json lewat loadProducts() di app.js
+      let products = [];
+      try {
+        products = await loadProducts(); // langsung pakai fungsi global dari app.js
+      } catch (err) {
+        console.error('Gagal memuat produk:', err);
+        grid.innerHTML =
+          '<p class="error-state">Gagal memuat produk unggulan.</p>';
+        return;
+      }
+
+      if (!Array.isArray(products) || !products.length) {
+        grid.innerHTML =
+          '<p class="empty-state">Belum ada produk yang dapat ditampilkan.</p>';
+        return;
+      }
+
+      // 2) Filter produk unggulan: kategori = "kitab" + is_popular = true
+      const MAX_FEATURED = 7;
+      let featured = products.filter(
+        p => p.category === 'kitab' && p.is_popular === true
+      );
+
+      // Kalau belum ada yang ditandai, fallback: 7 kitab pertama
+      if (!featured.length) {
+        featured = products.filter(p => p.category === 'kitab').slice(0, MAX_FEATURED);
+      } else {
+        featured = featured.slice(0, MAX_FEATURED);
+      }
+
+      if (!featured.length) {
+        grid.innerHTML =
+          '<p class="empty-state">Belum ada produk unggulan yang ditandai.</p>';
+        return;
+      }
+
+      // 3) Render kartu produk
+      grid.innerHTML = '';
+
+      featured.forEach(p => {
+        if (typeof window.createProductCard === 'function') {
+          // pakai kartu standar dari app.js (dipakai juga di Katalog)
+          grid.appendChild(window.createProductCard(p));
+        } else {
+          // fallback kalau suatu saat createProductCard tidak ada
+          grid.appendChild(createFallbackCard(p));
+        }
+      });
+    });
+
+    // Kartu fallback sangat sederhana (hanya jaga-jaga)
+    function createFallbackCard(p) {
+      const card = document.createElement('article');
+      card.className = 'product-card hdr-hover';
+
+      const title =
+        (p.title && (p.title.id || p.title.en || p.title.ar)) ||
+        p.name ||
+        'Produk';
+      const img =
+        (p.images && p.images.length && p.images[0]) ||
+        'assets/images/default-product.jpg';
+      const price =
+        typeof formatRupiah === 'function'
+          ? formatRupiah(p.price || 0)
+          : 'Rp ' + (Number(p.price) || 0).toLocaleString('id-ID');
+
+      card.innerHTML = `
+        <div class="product-media">
+          <img src="${img}" alt="${title}">
+        </div>
+        <div class="product-body">
+          <h3 class="product-title">${title}</h3>
+          <div class="product-price-row">
+            <span class="product-price">${price}</span>
+          </div>
+          <div class="product-card-actions">
+            <a href="product.html?id=${encodeURIComponent(
+              p.id
+            )}" class="btn btn-sm btn-secondary">Detail</a>
+          </div>
+        </div>
+      `;
+      return card;
+    }
+  </script>
+    <!-- Motion Effects Libraries (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  
+  <!-- Motion Hero Effects -->
+  <link rel="stylesheet" href="assets/css/motion-hero.css">
+</body>
+</html>
+</body>
+</html>
